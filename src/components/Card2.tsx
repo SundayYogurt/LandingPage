@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useCartStore } from "../store/Store"; // นำเข้า useCartStore
 import Swal from "sweetalert2"; // นำเข้า sweetalert2
 

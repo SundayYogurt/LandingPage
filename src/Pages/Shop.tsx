@@ -1,4 +1,4 @@
-import React from "react";
+
 import ViewCart from "../components/ViewCart";
 
 const Shop = () => {

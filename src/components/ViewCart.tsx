@@ -1,13 +1,9 @@
-import React from 'react';
+
 import { useCartStore } from '../store/Store';
 
 const ViewCart = () => {
     const { cart, updateItemQuantity, removeFromCart } = useCartStore();
     const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-
-    // PromptPay QR Code details
-    const phoneNumber = '0959042353'; // หมายเลขโทรศัพท์ที่เชื่อมกับ PromptPay
-    const amount = totalPrice; // จำนวนเงินที่ต้องการจ่าย
 
     // ฟังก์ชันการเพิ่มจำนวนสินค้า
     const increaseQuantity = (index: number) => {
@@ -51,7 +47,6 @@ const ViewCart = () => {
         printWindow?.document.write(`<h3>QR Code สำหรับการชำระเงิน</h3>`);
 
         // ใส่ QR code ในหน้าปริ้น
-        printWindow?.document.write(`<div><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${generatePromptPayQRCode(phoneNumber, amount)}" alt="PromptPay QR Code" /></div>`);
         printWindow?.document.close();
         printWindow?.print();
     };

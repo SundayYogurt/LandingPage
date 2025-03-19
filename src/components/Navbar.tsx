@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useCartStore } from "../store/Store"; // ใช้ useCartStore จาก Zustand
 import { Link } from "react-router";
 const Navbar = () => {

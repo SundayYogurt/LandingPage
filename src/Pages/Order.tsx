@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Card2 from '../components/Card2'
 const Order = () => {
     return (
