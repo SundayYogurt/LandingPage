@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useCartStore } from "../store/Store";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 type Option = {
     label: string;
@@ -23,6 +24,8 @@ type CardProps = {
 
 const Card2: React.FC<CardProps> = ({ Image, name, price, p, options, mores }) => {
     const { cart, addToCart } = useCartStore();
+
+    const navigate = useNavigate();
 
     const handleBuy = async () => {
         // First prompt: Select food type
@@ -58,6 +61,7 @@ const Card2: React.FC<CardProps> = ({ Image, name, price, p, options, mores }) =
             showCancelButton: true,
             confirmButtonText: "ยืนยัน",
             cancelButtonText: "ยกเลิก",
+
         });
 
         // Handle if moreValues is not an array, convert it to array
@@ -89,11 +93,18 @@ const Card2: React.FC<CardProps> = ({ Image, name, price, p, options, mores }) =
         addToCart(newItem);
 
         // แสดงข้อความสำเร็จ
+
         Swal.fire({
             title: "สำเร็จ!",
             text: `คุณได้เพิ่ม ${newItem.name} ราคา ${finalPrice} บาท ไปยังตะกร้าแล้ว`,
             icon: "success",
             confirmButtonText: "ตกลง",
+            showDenyButton: true, // ✅ แสดงปุ่ม "ไปที่ตะกร้า"
+            denyButtonText: "ไปที่ตะกร้า",
+        }).then((result) => {
+            if (result.isDenied) {
+                navigate("/shop"); // ✅ เปลี่ยนหน้าไปยังตะกร้า
+            }
         });
 
         console.log(`✅ สั่งซื้อ: ${newItem.name} | ราคา: ${finalPrice} บาท`);
