@@ -1,4 +1,5 @@
-// Note: Hero Component
+import { Link } from 'react-scroll'; // Import จาก react-scroll
+
 const Hero = () => {
     return (
         <div className="relative hero bg-base-200 min-h-screen">
@@ -18,16 +19,23 @@ const Hero = () => {
                 <div className="max-w-2xl mx-auto my-8">
                     <h1 className="text-7xl font-bold mb-6">อาหารเพื่อสุขภาพ</h1>
                     <p className="py-10 text-xl text-justify md:text-center mb-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        ร้านอาหารเพื่อสุขภาพ ที่มีเมนูอาหารที่อร่อย และเพื่อสุขภาพของคุณ
+                        ลองเลย วันนี้
                     </p>
-                    <button className="btn btn-neutral btn-xl sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-                        <a href="#card2">Get Started</a>
-                    </button>
+                    {/* ใช้ Link จาก react-scroll */}
+                    <Link
+                        to="order"  // เลื่อนไปยังส่วนที่มี id="order"
+                        smooth={true} // เลื่อนแบบนุ่มนวล
+                        duration={500} // ระยะเวลาในการเลื่อน
+                    >
+                        <button className="btn btn-neutral btn-xl sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
+                            สั่งอาหาร
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

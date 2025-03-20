@@ -1,4 +1,4 @@
-
+import { Link } from "react-router";
 const Card = () => {
     return (
         <div className="mx-4 md:mx-auto max-w-6xl">
@@ -17,13 +17,15 @@ const Card = () => {
                         <p className="ml-10 py-10 text-2xl text-justify md:text-center mb-6">
                             OAT MIKE STRAWBERRY เจ น้ำตาล 0%
                         </p>
-                        <button className="btn btn-neutral btn-xl sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-                            สั่งซื้อสินค้า
-                        </button>
+                        <Link to='/Drink'>
+                            <button className="btn btn-neutral btn-xl sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
+                                สั่งซื้อสินค้า
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

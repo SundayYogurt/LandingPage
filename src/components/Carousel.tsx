@@ -45,50 +45,51 @@ const Carousel: React.FC = () => {
     const goToSlide = (index: number) => setCurrent(index);
 
     return (
-        <div className="relative w-full max-w-2xl mx-auto">
-            {/* Slides */}
-            <div className="relative w-auto h-56 md:h-96 overflow-hidden rounded-lg">
-                {slides.map((slide, index) => (
-                    <img
-                        key={index}
-                        src={slide.src}
-                        alt={slide.alt}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100" : "opacity-0"
-                            }`}
-                    />
-                ))}
+        <div className="flex justify-center items-center mt-0 mb-0">
+            <div className="relative w-full max-w-6xl mx-auto">
+                {/* Slides */}
+                <div className="relative w-full h-56 md:h-96 overflow-hidden rounded-lg">
+                    {slides.map((slide, index) => (
+                        <img
+                            key={index}
+                            src={slide.src}
+                            alt={slide.alt}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100" : "opacity-0"}`}
+                        />
+                    ))}
+                </div>
+
+                {/* Indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            className={`w-3 h-3 rounded-full focus:outline-none ${index === current ? "bg-white" : "bg-gray-400"}`}
+                            onClick={() => goToSlide(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                            title={`Go to slide ${index + 1}`}
+                            aria-current={index === current ? "true" : "false"}
+                        />
+                    ))}
+                </div>
+
+                {/* Prev Button */}
+                <button
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none md:hidden"
+                    onClick={prevSlide}
+                >
+                    ❮
+                </button>
+
+                {/* Next Button */}
+                <button
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none md:hidden"
+                    onClick={nextSlide}
+                >
+                    ❯
+                </button>
             </div>
-
-            {/* Indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        className={`w-3 h-3 rounded-full focus:outline-none ${index === current ? "bg-white" : "bg-gray-400"}`}
-                        onClick={() => goToSlide(index)}
-                        aria-label={`Go to slide ${index + 1}`}
-                        title={`Go to slide ${index + 1}`}
-                        aria-current={index === current ? "true" : "false"}
-                    />
-                ))}
-            </div>
-
-            {/* Prev Button */}
-            <button
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none"
-                onClick={prevSlide}
-            >
-                ❮
-            </button>
-
-            {/* Next Button */}
-            <button
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none"
-                onClick={nextSlide}
-            >
-                ❯
-            </button>
-        </div >
+        </div>
     );
 };
 

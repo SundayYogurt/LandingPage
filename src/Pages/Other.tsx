@@ -6,25 +6,65 @@ const Other = () => {
             <div className="my-25">
                 <h1 className="my-20 text-3xl font-bold text-center">น้ำรักพี่โชน</h1>
                 <div className="flex className='flex flex-wrap justify-center gap-4" id="card2">
-                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/401632583_827275699406022_3228130372177816084_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGt2865xH5MGAtCT5XLjukEePPGb-LLsVl488Zv4suxWbsLqoORHDLajF6VsFWUi7k1PwvaZpZE0XtkOliSfLXo&_nc_ohc=tS_B8j2CjAUQ7kNvgF7U9g0&_nc_oc=Adnkw-HG0NM8AuDCFThZukAy_5TBop3vnSHZ33aKERXtNjJ_46hfRLE2n3ai7hkC8fo&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=bLGbH_OWo25pZ1oj9dvmEg&oh=00_AYGBfQ2txarGHwg22w_FEaWABY-6TmmA7DvJcQdBJbrAWA&oe=67E0A58B"
-                        name="Black coffee lemon"
-                        price={85}
-                        p="real big black coffee lemon อร่อย ๆ สูตรอาหารเด็ด ๆ ที่คุณต้องลอง"
+                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/481002805_1198417922291796_7193991819165992399_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFxr6-82uM9x36WhfKpZ2Wvf2MqY0GYhDd_YypjQZiEN0jJVMQdpS54fWSNzy9flVRmJqzXZ6ruc2OecWSdT4Vo&_nc_ohc=7iNgprzgLaoQ7kNvgFEVYMC&_nc_oc=AdmhJGPODZQByjylk6NnMKfnOabOZGxOpi0CMVtukI6t4ZYwC-d1m06vDjurCykPtso&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=TNxaMSQe-qPEpm_bOAnACA&oh=00_AYHZXECllr9nDI_SIHmX_cUG9oKfOhOqeXnRx8r-NXg0pA&oe=67E1D4FE"
+                        name="ครอฟเฟิล สูตรเฮลตี้"
+                        price={30}
+                        p="แป้งก็นุ่ม หอมก็หอม อร่อยก็อร่อย คือดีอ่ะ"
+                        options={[
+                            { label: "พิเศษ", price: 20 },
+                            { label: "ธรรมดา", price: 0 }
+                        ]}
+                        mores={[
+                            { label: "หวาน 0%", price: 0 },
+                            { label: "หวาน 25%", price: 0 },
+                            { label: "หวาน 50%", price: 0 },
+                            { label: "หวาน 100%", price: 0 }
+                        ]}
                     />
-                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/399460691_827275659406026_3572005752415155278_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE_Ex84pz7AYsS1ZT9emUASYw509-ObpN9jDnT345uk35n6nyBUluYsk_Ff1Bb55io0trrYLSlAZxJhRwZjS6iG&_nc_ohc=n7nfUVN6v-AQ7kNvgELOqVa&_nc_oc=AdnQ3Ye9OnEDh3gz-QtatAOf0pKF5l2jYIzLdGg_a0iv-1szRh6m8r5Sq4A-slR96RI&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=HqQhP0GV6LJMPgKtjlFB4Q&oh=00_AYE3lMK8H6dQeUj_H0zMlPaSiM2dl16cMSXj5651Jd4abg&oe=67E0BB76"
-                        name="Chockolate Mint"
-                        price={75}
+                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/481270521_1198418295625092_3501683804845335863_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeGKVm7xyyosGcsfOSviv_DLh1yvGr3VMdGHXK8avdUx0ax6bYk7juQ1bjdNKostDpfv17aijkcYQMpK1JEVCMyn&_nc_ohc=X-rZqFQnjjMQ7kNvgGyKlKQ&_nc_oc=AdkT_LYt96ZcFbWWfP1MdbgvyvaIZIjUGbV9IJnyWRYd2ZRBKOm2iEIk2d_ezqjHc9A&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=-zGncvLfXXlG8aJ1OqW8Sg&oh=00_AYE38e1gZ-aTcPPez8cOGA0qQBdWHFICVDZZaRkh0TzIXg&oe=67E1D7C6"
+                        name="ครอฟเฟิลอัลม่อน สูตรเฮลตี้"
+                        price={35}
                         p="ชอคแลตมิ้น อร่อยๆ"
+                        options={[
+                            { label: "พิเศษ", price: 20 },
+                            { label: "ธรรมดา", price: 0 }
+                        ]}
+                        mores={[
+                            { label: "หวาน 0%", price: 0 },
+                            { label: "หวาน 25%", price: 0 },
+                            { label: "หวาน 50%", price: 0 },
+                            { label: "หวาน 100%", price: 0 }
+                        ]}
                     />
-                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/401533729_827275656072693_5439242235825767984_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeELSL9uky7aUa4UGTTdQFMrY6WK-CMIjQhjpYr4IwiNCHdo1WOf7QHDIUL949RWaxV6p4xKLs9TLV3gkGjdKel4&_nc_ohc=3ER5Am4a6KIQ7kNvgEJ9K3d&_nc_oc=AdlU6UrDRHd6lxmQfEhnrMqnITjTHnGd-v8R4NZ8Vgo3SNIVKLZNxXcZ_lUT7YJHyYM&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=2Z_MS0sG4YW_-DwdzMlDmQ&oh=00_AYGywR-uvOim3NQaIdSgFC6J2NfjyITARcXDIRFcLeKXjw&oe=67E0AA7A"
-                        name="Green tea lemon"
-                        price={85}
-                        p="ชาเขียวสูตรเปรี้ยว"
+                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/422187264_881634217303503_5728409844190523978_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEs520CmSNqjyhZjrO1ZladDfuWDXwA18wN-5YNfADXzPPoK4f9K8FMCkmGtKvzy6XecgzOJpRYNDm7NyLeYrZW&_nc_ohc=Nm_rhOzG64QQ7kNvgGPpCK0&_nc_oc=AdmyAOtHXQXso8JYRQjq3fJRFe-73r-AyhrY-feF1LmzWRfWq49moTws2ZH4CNFpV08&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=jwg98DbzcB4FBtS5kU2Wbw&oh=00_AYEFKQeIDyqFK19F_1NXpwawep45azDXATFVCHdsVlEW5Q&oe=67E19EEF"
+                        name="บัตเตอร์โทสต์"
+                        price={40}
+                        p="บัตเตอร์โทสต์ อร่อย ๆ  ที่คุณต้องลอง"
+                        options={[
+                            { label: "พิเศษ", price: 20 },
+                            { label: "ธรรมดา", price: 0 }
+                        ]}
+                        mores={[
+                            { label: "หวาน 0%", price: 0 },
+                            { label: "หวาน 25%", price: 0 },
+                            { label: "หวาน 50%", price: 0 },
+                            { label: "หวาน 100%", price: 0 }
+                        ]}
                     />
-                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/401566462_827275706072688_1448853163812970869_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH2lvXuZzknRP2PCO58vBOeiu90yKaLgCmK73TIpouAKbHcyLlvgiTOBGKJMhmeoNydHJ1YuA78xIKt03Q3kYKJ&_nc_ohc=6sc7V9nCp9QQ7kNvgHPiH8H&_nc_oc=AdngQshpWlc-Qf6YssWlCW9D_nE-8TAYjTMkQU9ClJ8rQKppMjRZBcXlGXhEZ4qjjQc&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=bZVMcs0_NbwmqivUPccu1A&oh=00_AYHs3xkyOQQflUDDRVmGh23wTHfHlabnKPHB6KDWS1sAUw&oe=67E0CD32"
-                        name="red lemon tea"
+                    <Card2 Image="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/455636505_1037219281744995_8349249798443118419_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHmHW69HYrooLb7z1jM-nWx-EX43nrGWc_4RfjeesZZz2t9CpfGlo3zXkueK7g2F61ftCYDlJyczpTKLA47otae&_nc_ohc=Q8Uld5w4uWMQ7kNvgGYoo84&_nc_oc=AdkHJXxEjeFWAwf2jlleL4AYtcm0f5a324nMUmsVjBaamljiaYspLr3pNafB3fMSMII&_nc_zt=23&_nc_ht=scontent.fkdt2-1.fna&_nc_gid=OcQ01gAn0jrjyuY0ILN6KQ&oh=00_AYGh0x2q_sKC6DHGjNd9gPnMnvCJx4LgXCzrNZEaY9_cnQ&oe=67E1C079"
+                        name="บานอฟฟี่ บานาน่า"
                         price={50}
-                        p="น้ำแดง ถวายศาล"
+                        p="บานอฟฟี่ บานาน่า อร่อย ๆ  ที่คุณต้องลอง"
+                        options={[
+                            { label: "พิเศษ", price: 20 },
+                            { label: "ธรรมดา", price: 0 }
+                        ]}
+                        mores={[
+                            { label: "หวาน 0%", price: 0 },
+                            { label: "หวาน 25%", price: 0 },
+                            { label: "หวาน 50%", price: 0 },
+                            { label: "หวาน 100%", price: 0 }
+                        ]}
                     />
                 </div>
             </div>

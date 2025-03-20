@@ -28,8 +28,9 @@ const Navbar = () => {
         setCartOpen(false);
       }
     };
-
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -44,15 +45,18 @@ const Navbar = () => {
   // ใช้ inline style เพื่อควบคุมพื้นหลัง Navbar
   const backgroundColor = isScrolled ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,1)";
 
+  const jsonString = '{"name": "Protein Diet24"}';
+  const parsedData = JSON.parse(jsonString);
+  console.log(parsedData);
   return (
     <div
       className="navbar shadow-sm fixed top-0 w-full z-10 transition-all duration-300"
       style={{ backgroundColor }}
     >
       <div className="flex-1">
-        <Link to='/'> <a className="btn btn-ghost text-xl" aria-label="Protein Diet24">
-          Protein Diet24
-        </a></Link>
+        <Link to='/'> <p className="btn btn-ghost text-xl" aria-label="Protein Diet24">
+          {parsedData.name}
+        </p></Link>
       </div>
 
       <div className="hidden md:flex flex-1 justify-center join flex gap-4">
@@ -154,19 +158,19 @@ const Navbar = () => {
           >
             <ul>
               <li>
-                <a className="block py-2" onClick={() => alert("Order Food Clicked!")}>
+                <Link to='/order'> <a className="block py-2">
                   Order Food
-                </a>
+                </a></Link>
               </li>
               <li>
-                <a className="block py-2" onClick={() => alert("Order Drinks Clicked!")}>
+                <Link to='/drink'><a className="block py-2">
                   Order Drinks
-                </a>
+                </a></Link>
               </li>
               <li>
-                <a className="block py-2" onClick={() => alert("Others Clicked!")}>
+                <Link to='/other'> <a className="block py-2">
                   Others
-                </a>
+                </a></Link>
               </li>
             </ul>
           </div>
