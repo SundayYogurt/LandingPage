@@ -19,7 +19,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (profileRef.current && !profileRef.current.contains(event.target as Node)) {
         setProfileOpen(false);
       }
@@ -30,11 +30,12 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
-
+    document.addEventListener("touchstart", handleClickOutside); // ✅ รองรับ iOS
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, []);
 
@@ -74,6 +75,7 @@ const Navbar = () => {
       <div className="flex-none md:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
+          onTouchStart={() => setMenuOpen(!menuOpen)}
           className="btn btn-ghost text-xl"
           aria-label="Toggle menu"
         >
@@ -93,6 +95,7 @@ const Navbar = () => {
         <div ref={cartRef} className="dropdown dropdown-end">
           <button
             onClick={() => setCartOpen(!cartOpen)}
+            onTouchStart={() => setCartOpen(!cartOpen)}
             className="btn btn-ghost btn-circle"
             aria-label="Cart"
           >
@@ -121,6 +124,7 @@ const Navbar = () => {
         <div ref={profileRef} className="dropdown dropdown-end">
           <button
             onClick={() => setProfileOpen(!profileOpen)}
+            onTouchStart={() => setProfileOpen(!profileOpen)}
             className="btn btn-ghost btn-circle avatar"
             aria-label="User Profile"
           >
