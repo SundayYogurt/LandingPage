@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@react-pdf/font": "^4.0.2",
+    "@react-pdf/renderer": "^4.3.0",
     "@tailwindcss/vite": "^4.0.14",
     "framer-motion": "^12.5.0",
     "qrcode.react": "^4.2.0",

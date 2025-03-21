@@ -61,7 +61,8 @@ const Home = () => {
                 { label: "หมูกรอบ", price: 0 },
                 { label: "ไก่", price: 0 },
                 { label: "เนื้อ", price: 20 },
-                { label: "กุ้ง", price: 10 }
+                { label: "กุ้ง", price: 10 },
+                { label: "หมา", price: 100 }
               ]}
             />
           </motion.div>
